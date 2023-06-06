@@ -1,12 +1,14 @@
-// const square1 = document.querySelector('.square-1')
-// const square2 = document.querySelector('.square-2')
-// const square3 = document.querySelector('.square-3')
-// const square4 = document.querySelector('.square-4')
-// const square5 = document.querySelector('.square-5')
-// const square6 = document.querySelector('.square-6')
-// const square7 = document.querySelector('.square-7')
-// const square8 = document.querySelector('.square-8')
-// const square9 = document.querySelector('.square-9')
+const square1 = document.querySelector('.square-1')
+const square2 = document.querySelector('.square-2')
+const square3 = document.querySelector('.square-3')
+const square4 = document.querySelector('.square-4')
+const square5 = document.querySelector('.square-5')
+const square6 = document.querySelector('.square-6')
+const square7 = document.querySelector('.square-7')
+const square8 = document.querySelector('.square-8')
+const square9 = document.querySelector('.square-9')
+
+const startButton = document.querySelector('.startButton')
 
 const squares = [1,2,3,4,5,6,7,8,9]
 let squareNum = []
@@ -41,12 +43,36 @@ function blueSquare(){
 
 let counter = 0;
 
-const interVal = setInterval(function(){
-    blueSquare();
-    counter++;
-    if(counter === 9){
-        console.log(squareNum)
-        counter = 0;
-        clearInterval(interVal)
-    }
-},1000);
+startButton.addEventListener('click',function(){
+    squareNum = [];
+    let count = 10;
+
+    const countNumber = document.querySelector('.countNumber');
+    countNumber.textContent = count;
+
+    const interVal = setInterval(function(){
+        blueSquare();
+        counter++;
+        if(counter === 9){
+            console.log(squareNum)
+            counter = 0;
+            clearInterval(interVal)
+            delay(1000,countDown);
+        }
+    },1000);
+
+    function delay(time, callback) {
+        setTimeout(callback, time); 
+      }
+
+function countDown() {
+    const countInterval = setInterval(function() {
+      count--;
+      countNumber.textContent = count;
+      if (count === 0) {
+        clearInterval(countInterval);
+      }
+    }, 1000);
+  };
+
+})
