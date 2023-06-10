@@ -11,26 +11,29 @@
 
 <body>
     <div class="game">
-        <div class="firstLine">
-            <div class="square square-1">1</div>
-            <div class="square square-2">2</div>
-            <div class="square square-3">3</div>
-        </div>
-        <div class="secondLine">
-            <div class="square square-4">4</div>
-            <div class="square square-5">5</div>
-            <div class="square square-6">6</div>
-        </div>
-        <div class="thirdLine">
-            <div class="square square-7">7</div>
-            <div class="square square-8">8</div>
-            <div class="square square-9">9</div>
+        <div class="squares">
+            <div class="firstLine">
+                <div class="square" data-number="1"></div>
+                <div class="square" data-number="2"></div>
+                <div class="square" data-number="3"></div>
+            </div>
+            <div class="secondLine">
+                <div class="square" data-number="4"></div>
+                <div class="square" data-number="5"></div>
+                <div class="square" data-number="6"></div>
+            </div>
+            <div class="thirdLine">
+                <div class="square" data-number="7"></div>
+                <div class="square" data-number="8"></div>
+                <div class="square" data-number="9"></div>
+            </div>
         </div>
     </div>
     <div class="tool">
         <div>레벨 1</div>
         <button class="startButton">시작</button>
-        <p class="countNumber">카운트</p>
+        <p class="countNumber">제한시간</p>
+        <p class="message">순서 맞춰보세요</p>
     </div>
     <script src="script.js"></script>
 </body>

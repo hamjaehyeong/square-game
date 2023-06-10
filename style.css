@@ -1,3 +1,13 @@
+@keyframes vibration {
+    from {
+      transform: rotate(3deg);
+    }
+    to {
+      transform: rotate(-3deg);
+    }
+  }
+
+
 body{
     box-sizing: border-box;
     margin: 0;
@@ -14,6 +24,7 @@ body{
     align-items: center;
     height: 100vh;
     position: relative;
+    
 }
 
 .firstLine{
@@ -29,7 +40,13 @@ body{
     flex-direction: row;
 }
 
+.cursor{
+
+    cursor: pointer;
+}
+
 .square{
+    
     transition: all 1s ease-out;
     border-style: solid;
     width: 50px;
@@ -39,23 +56,20 @@ body{
     justify-content: center;
     align-items: center;
     font-weight: 600;
+    
 }
-/* 
-.square:hover{
 
-    width: 60px;
-    height: 60px;
-    background-color: blue;
-    transition: 1s;
-    font-weight: 900;
-} */
+.vibration {
+    animation: vibration 0.1s infinite;
+}
 
 .blue{
-    width: 60px;
-    height: 60px;
+    /* width: 60px;
+    height: 60px; */
     background-color: blue;
-    transition: 1s;
-    font-weight: 900;
+    transition: 0.5s;
+    
+    /* font-weight: 900; */
 }       
 
 
@@ -75,3 +89,13 @@ body{
 .tool *{
     margin-bottom: 20px
 }
+
+
+
+.red{
+    transition: 0.5s;
+    background-color: red;
+}
+
+.rainbow{
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, purple)}
